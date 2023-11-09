@@ -1,18 +1,16 @@
-import { Avatar, Box, Divider, Paper, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
+import { Divider, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Link from 'next/link';
 
 export default function ProjectList() {
     return (
         <Stack direction="column" spacing={2}
             sx={{
                 width: '400px',
-                // height: '100vh',
                 alignItems: 'center',
-                // backgroundColor: 'lightgrey',
                 overflowY: 'auto',
                 paddingLeft: 2,
                 paddingRight: 2
-                // padding: 2
             }}
         >
             <ListItem sx={{ display: 'flex', flexDirection: 'column', padding: 1, width: '100%', backgroundColor: 'background.paper', }}>

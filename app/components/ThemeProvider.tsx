@@ -4,7 +4,6 @@ import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
 const commonThemeOptions = {
     typography: {
         fontFamily: "Hiragino Sans",
