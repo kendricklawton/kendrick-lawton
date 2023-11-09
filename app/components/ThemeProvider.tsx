@@ -4,6 +4,7 @@ import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+
 const commonThemeOptions = {
     typography: {
         fontFamily: "Hiragino Sans",
@@ -11,39 +12,37 @@ const commonThemeOptions = {
 };
 
 const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#333',
-      },
-      secondary: {
-        main: '#666',
-        dark: '#fff',
-      },
-      background: {
-        default: '#222',
-        paper: '#333',
-      },
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#354F52',
     },
-    ...commonThemeOptions,
-  });
+    secondary: {
+      main: '#7E8288', 
+    },
+    background: {
+      default: '#121212',
+      paper: '#1E1E1E',
+    },
+  },
+  ...commonThemeOptions,
+});
 
-  const lightTheme = createTheme({
-    palette: {
-      mode: 'light',
-      primary: {
-        main: '#CCC',
-      },
-      secondary: {
-        main: '#999',
-        light: '#000',
-      },
-      background: {
-        paper: '#F5F5F5',
-      },
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#3E4C51', 
     },
-    ...commonThemeOptions,
-  });
+    secondary: {
+      main: '#7E8288',
+    },
+    background: {
+      paper: '#F5F5F5',
+    },
+  },
+  ...commonThemeOptions,
+});
 
 const ThemeContext = createContext({
     toggleTheme: () => { },

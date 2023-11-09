@@ -1,17 +1,20 @@
-'use client'
-
-import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
 import styles from '../page.module.css';
 import Box from '@mui/material/Box';
+import ProjectList from './ProjectList';
 
 export default function Projects() {
-
     return (
-        <Box className={styles.page}>
-            <Box className={styles.pageBoxOne} />
-            <Box className={styles.pageBoxTwo} />
-            <Box className={styles.pageBoxThree} />
+        <Box className={styles.wrapper}>
+            <Box className={styles.container}>
+                <ProjectList />
+            </Box>
         </Box>
     );
 };
+
+
+
+
+
+
+
