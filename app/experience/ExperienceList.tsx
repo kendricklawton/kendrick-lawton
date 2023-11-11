@@ -1,4 +1,4 @@
-import { Box, Divider, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, Divider, List, ListItem, ListItemIcon, ListItemText, Paper } from '@mui/material';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import Link from 'next/link';
@@ -11,16 +11,16 @@ import Link from 'next/link';
 
 export default function ExperienceList() {
     return (
-        <Box
+        <List
             sx={{
-                width: '500px',
+                width: '400px',
                 alignItems: 'center',
                 overflowY: 'auto',
                 paddingLeft: 2,
-                paddingRight: 2
+                paddingRight: 2,
             }}
         >
-            <ListItem sx={{ display: 'flex', flexDirection: 'column', padding: 1, width: '100%', backgroundColor: 'background.paper' }}>
+            <Paper sx={{ display: 'flex', flexDirection: 'column', padding: 1, width: '100%', backgroundColor: 'background.paper' }}>
                 <ListItemIcon sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '10px', width: '100%' }}>
                     <WorkHistoryIcon sx={{ marginRight: '10px' }} />
                     <ListItemText>Test Automation Specialist • Clyde & Co</ListItemText>
@@ -38,7 +38,7 @@ export default function ExperienceList() {
                 <ListItemText sx={{ width: '100%' }} primary="Eggplant DAI" />
                 <ListItemText sx={{ width: '100%' }} primary="Eggplant Performance" />
                 <ListItemText sx={{ width: '100%' }} primary="Selenium" />
-            </ListItem>
-        </Box>
+            </Paper>
+        </List>
     );
 }

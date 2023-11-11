@@ -1,56 +1,68 @@
+'use client'
+
+import { useEffect, useState } from 'react';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import Link from 'next/link';
 import styles from '../page.module.css'
 import { usePathname } from 'next/navigation'
 
+
+
 export default function Header() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname()
 
-  const linkAbout = pathname === '/' ? styles.linkStyleActive : styles.linkStyle;
+  const linkHome = pathname === '/' ? styles.linkStyleActive : styles.linkStyle;
   const linkProjects = pathname === '/projects' ? styles.linkStyleActive : styles.linkStyle;
   const linkExperience = pathname === '/experience' ? styles.linkStyleActive : styles.linkStyle;
 
-  // const linkMenu = () => {
-  //   <Box className={styles.linkMenu}>
+  const handleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-  //     {pathname === '/' ? (
-  //       <Link href="/" rel="noopener noreferrer" className={styles.linkAbout}>
-  //         {isMobile ? 'HOME' : '•'}
-  //       </Link>
-  //     ) : (
-  //       <Link href="/" rel="noopener noreferrer" className={styles.linkStyle}>
-  //         HOME
-  //       </Link>
-  //     )}
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-  //     <Divider className={styles.dividerStyle} orientation="vertical" flexItem />
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (isMenuOpen) {
+        if (
+          event.target instanceof Element &&
+          !event.target.closest('#app-menu')
+        ) {
+          closeMenu();
+        }
+      }
+    };
 
-  //     {pathname === '/projects' ? (
-  //       <Link href="/projects" rel="noopener noreferrer" className={styles.linkProjects}>
-  //         {isMobile ? 'PROJECTS' : '•'}
-  //       </Link>
-  //     ) : (
-  //       <Link href="/projects" rel="noopener noreferrer" className={styles.linkStyle}>
-  //         PROJECTS
-  //       </Link>
-  //     )}
+    document.addEventListener('click', handleOutsideClick);
 
-  //     <Divider className={styles.dividerStyle} orientation="vertical" flexItem />
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
-  //     {pathname === '/experience' ? (
-  //       <Link href="/experience" rel="noopener noreferrer" className={styles.linkExperience}>
-  //         {isMobile ? 'EXPERIENCE' : '•'}
-  //       </Link>
-  //     ) : (
-  //       <Link href="/experience" rel="noopener noreferrer" className={styles.linkStyle}>
-  //         EXPERIENCE
-  //       </Link>
-  //     )}
-
-  //   </Box>
-  // }
+  const LinkMenu = () => {
+    return (
+      <Box id='app-menu' className={styles.linkMenu}>
+        <Link href="/" rel="noopener noreferrer" className={linkHome}>
+          HOME
+        </Link>
+        <Divider className={styles.dividerStyle} orientation="vertical" flexItem />
+        <Link href="/projects" rel="noopener noreferrer" className={linkProjects}>
+          PROJECTS
+        </Link>
+        <Divider className={styles.dividerStyle} orientation="vertical" flexItem />
+        <Link href="/experience" rel="noopener noreferrer" className={linkExperience}>
+          EXPERIENCE
+        </Link>
+      </Box>
+    );
+  }
 
   return (
     <>
@@ -107,11 +119,13 @@ export default function Header() {
         </Box>
 
         <Box className={styles.headerEnd} >
-          <IconButton color='secondary' sx={{ marginRight: 1 }}>
+          <IconButton onClick={handleMenu} color='secondary' sx={{ marginRight: 1 }}>
             <DragHandleIcon />
           </IconButton>
         </Box>
       </Box>
+
+      {isMenuOpen && <LinkMenu />}
     </>
   );
 }
