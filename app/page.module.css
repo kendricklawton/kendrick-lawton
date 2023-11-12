@@ -1,5 +1,6 @@
 .wrapper {
   height: 100vh;
+  min-height: 800px;
   /* min-height: 600px; */
   /* background-color: red; */
 }
@@ -10,20 +11,39 @@
   display: flex;
   flex-Direction: column;
   padding-top: 80px;
-  padding-right: 120px;
+  padding-right: 10%;
   padding-bottom: 80px;
   /* background-Color: blue; */
-  float: right
+  float: right;
+  position: sticky;
+  right: 0
+}
+
+.list {
+  /* width: 520px; */
+  align-items: center;
+  overflow-y: auto;
+  padding-left: 2;
+  padding-right: 2;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 100%;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .headerDesktop {
   height: 100vh;
-  min-height: 600px;
+  min-height: 800px;
   position: fixed;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
-  padding-left: 120px;
+  padding-left: 10%;
   padding-bottom: 80px;
   /* background-color: #CCCCCC; */
 }
@@ -36,62 +56,47 @@
 .headerCenter,
 .headerEnd {
   display: flex;
-
 }
 
 .headerStart {
   height: 30%;
   flex-direction: column;
   /* justify-content: center; */
-
-  /* background-color: aqua; */
 }
 
 .headerCenter {
   height: 40%;
   flex-direction: column;
   justify-content: center;
-  /* background-color: #CCCCCC; */
+
 }
 
 .headerEnd {
   height: 30%;
-  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ 
 }
 
 .footer {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
+  display: none;
 }
 
-.footerStart {
-  width: 20%;
-}
-
-.footerCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
-
-.footerEnd {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 20%;
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1120px) {
   .container {
     padding-Right: 0px;
     align-items: center;
     width: 100%;
     margin-right: 0px;
+  }
+
+  .list {
+    width: 80%;
+  }
+
+  .about {
+    width: 50%;
   }
 
   .headerDesktop {
@@ -127,6 +132,34 @@
 
   .headerEnd {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+  }
+
+  .footer {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footerStart {
+    width: 20%;
+  }
+  
+  .footerCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+  
+  .footerEnd {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 20%;
@@ -135,10 +168,10 @@
   .linkMenu {
     position: absolute;
     right: 0;
-    
+
     height: 400px;
     width: 400px;
-    
+
   }
 
   .linkStyle,
@@ -157,6 +190,5 @@
     background-color: #CCCCCC;
     transition: background-color 2s ease;
   }
-
 
 }

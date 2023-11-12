@@ -1,47 +1,40 @@
 'use client'
 
+
 import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-const commonThemeOptions = {
-    typography: {
-        fontFamily: "Hiragino Sans",
+const lightTheme = createTheme({
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#6699cc', // #0288d1
+        },
+        background: {
+            default: '#ECEFF1',
+            paper: '#CCC',
+        },
     },
-};
+    typography: {
+        overline: {
+            color: '#4b4b4b',
+        },
+        body1: {
+            color: '#4b4b4b',
+        }
+    },
+});
 
 const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#354F52',
+    palette: {
+        mode: 'dark',
+        background: {
+            default: '#676767',
+        },
     },
-    secondary: {
-      main: '#7E8288', 
-    },
-    background: {
-      default: '#5a5a5a',
-      paper: '#1E1E1E',
-    },
-  },
-  ...commonThemeOptions,
-});
-
-const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#fff', 
-    },
-    secondary: {
-      main: '#fff',
-    },
-    background: {
-      paper: '#f8f8ff',
-    },
-  },
-  ...commonThemeOptions,
-});
+}
+);
 
 const ThemeContext = createContext({
     toggleTheme: () => { },
@@ -68,21 +61,3 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         </ThemeContext.Provider>
     );
 };
-
-{/* 
-    const isThemeSwitchingEnabled = true; // Feature Flag
-    const toggleTheme = () => {
-    const body = document.body;
-    if (isThemeSwitchingEnabled) {
-      setIsDarkTheme((prevIsDarkTheme) => !prevIsDarkTheme);
-    }
-  }; 
-
-    const body = document.body;
-
-    if (isDarkTheme) {
-        body.classList.add('dark-mode');
-    } else {
-        body.classList.remove('dark-mode');
-    };
-*/}

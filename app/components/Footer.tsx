@@ -14,28 +14,28 @@ export default function Footer() {
     const { toggleTheme } = useThemeContext();
 
     return (
-        <Box className={styles.footer} sx={{ backgroundColor: 'background.paper' }}>
+        <Box className={styles.footer}>
             <Box className={styles.footerStart}>
             </Box>
 
             <Box className={styles.footerCenter}>
                 <Link href="https://www.linkedin.com/in/kendrick-lawton-257684247/" target="_blank" rel="noopener noreferrer">
-                    <IconButton aria-label="LinkedIn" color='secondary'>
+                    <IconButton color='primary' aria-label="LinkedIn" >
                         <LinkedInIcon />
                     </IconButton>
                 </Link>
 
 
                 <Link href="https://github.com/kendricklawton/" target="_blank" rel="noopener noreferrer" >
-                    <IconButton color='secondary' aria-label="GitHub">
+                    <IconButton color='primary' aria-label="GitHub">
                         <GitHubIcon />
                     </IconButton>
                 </Link>
             </Box>
 
             <Box className={styles.footerEnd}>
-                <IconButton color='secondary' onClick={toggleTheme} sx={{ marginRight: 1 }}>
-                    <DarkModeIcon />
+                <IconButton color='primary' onClick={toggleTheme} sx={{ marginRight: 1 }}>
+                    <DarkModeIcon  />
                 </IconButton>
             </Box>
         </Box>
