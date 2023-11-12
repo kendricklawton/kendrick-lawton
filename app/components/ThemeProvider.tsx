@@ -9,19 +9,19 @@ const lightTheme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#6699cc', // #0288d1
+            main: '#6699cc',
         },
         background: {
             default: '#ECEFF1',
-            paper: '#CCC',
         },
     },
     typography: {
+        h2: {
+            color: '#767676',
+            fontSize: '1.3rem',
+        }, 
         overline: {
-            color: '#4b4b4b',
-        },
-        body1: {
-            color: '#4b4b4b',
+            color: '#767676',
         }
     },
 });
@@ -32,6 +32,11 @@ const darkTheme = createTheme({
         background: {
             default: '#676767',
         },
+    },
+    typography: {
+        h2: {
+            fontSize: '1.3rem',
+        }
     },
 }
 );
