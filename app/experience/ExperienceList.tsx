@@ -29,7 +29,7 @@ export default function ExperienceList() {
                     <ListItemIcon className={styles.listItemIcon}>
                         <ConstructionIcon color='primary' sx={{ marginRight: '4px' }} />
                         {experience.technologies.map((tech, index) => (
-                            <Typography variant="h2" key={index} sx={{marginRight: '4px' }}>
+                            <Typography variant="h2" key={index} sx={{marginRight: '4px', borderRadius: '12px', backgroundColor: '#d1d1d1', padding: 1 }}>
                                 {tech}
                             </Typography>
                         ))}
