@@ -1,131 +1,45 @@
 .wrapper {
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  flex-direction: row;
-}
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 18%;
+    padding-right: 18%;
+  }
 
-.headerDesktop {
-  height: inherit;
-  min-height: inherit;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
-  padding-left: 10%;
-  padding-bottom: 80px;
-
-}
-
-.container {
-  height: inherit;
-  min-height: inherit;
-  width: 50%;
-  display: flex;
-  flex-Direction: row;
-  justify-content: flex-end;
-  padding-top: 80px;
-  padding-right: 10%;
-  padding-bottom: 80px;
-
-}
-
-.list {
-  align-items: center;
-  overflow-y: auto;
-  padding-left: 2;
-  padding-right: 2;
-}
-
-.listButton {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 12px;
-  text-transform: none;
-  /* border-top: none;
-  border-left: none;
-  border-right: none; 
-  border: 1px solid; */
-  /* border-radius: 0%; */
-}
-
-.listItemIcon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  padding: 1;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: 100%;
-  align-items: center;
-  overflow-y: auto;
-}
-
-
-
-.headerMobile {
-  display: none;
-}
-
-.headerStart,
-.headerCenter,
-.headerEnd {
-  display: flex;
-}
-
-.headerStart {
-  height: 30%;
-  flex-direction: column;
-  /* justify-content: center; */
-}
-
-.headerCenter {
-  height: 40%;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.headerEnd {
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-}
-
-.footer {
-  display: none;
-}
-
-@media screen and (max-width: 1080px) {
   .container {
-    padding-Right: 0px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    margin-right: 0px;
-  }
-
-  .list {
-    width: 80%;
-  }
-
-  .about {
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  .headerDesktop {
-    display: none;
+  .containerHome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .headerMobile {
+  .menu {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: blue; */
+  }
+
+  .menuContent {
+    display: flex;
+    flex-direction: column;
+   }
+
+   .headerMobile {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -187,12 +101,20 @@
     width: 20%;
   }
 
+  /* .listButton {
+
+  } */
+
   .linkMenu {
     position: absolute;
     right: 0;
     margin-right: 20px;
     top: 55px;
     z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* height: 300px; */
   }
 
   .linkStyle {
@@ -203,6 +125,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 2px;
+    height: 50px;
     width: 100%;
   }
 
@@ -216,7 +139,12 @@
     width: 100%;
     background-color: #CCCCCC;
     width: 100%;
+    height: 50px;
     transition: background-color 2s ease;
   }
 
-}
+  .listItemIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }

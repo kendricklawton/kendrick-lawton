@@ -20,21 +20,21 @@ export default function Footer() {
 
             <Box className={styles.footerCenter}>
                 <Link href="https://www.linkedin.com/in/kendrick-lawton-257684247/" target="_blank" rel="noopener noreferrer">
-                    <IconButton color='secondary' aria-label="LinkedIn" >
+                    <IconButton color='primary' aria-label="LinkedIn" >
                         <LinkedInIcon />
                     </IconButton>
                 </Link>
 
 
                 <Link href="https://github.com/kendricklawton/" target="_blank" rel="noopener noreferrer" >
-                    <IconButton color='secondary' aria-label="GitHub">
+                    <IconButton color='primary' aria-label="GitHub">
                         <GitHubIcon />
                     </IconButton>
                 </Link>
             </Box>
 
             <Box className={styles.footerEnd}>
-                <IconButton color='secondary' onClick={toggleTheme} sx={{ marginRight: 1 }}>
+                <IconButton color='primary' onClick={toggleTheme} sx={{ marginRight: 1 }}>
                     <DarkModeIcon  />
                 </IconButton>
             </Box>

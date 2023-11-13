@@ -1,15 +1,20 @@
+import React from 'react';
 import styles from '../page.module.css';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 import ExperienceList from './ExperienceList';
-import Menu from '../components/Menu';
 
 export default function Experience() {
     return (
         <Box className={styles.wrapper}>
-             <Menu />
             <Box className={styles.container}>
-               <ExperienceList />
+
+                <h1 style={{
+                    fontWeight: '100',
+                    fontSize: '4rem'
+                }}>Places I've Been</h1>
+
             </Box>
+            <ExperienceList />
         </Box>
     );
 };

@@ -1,15 +1,23 @@
+import React from 'react';
 import styles from '../page.module.css';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 import ProjectList from './ProjectList';
-import Menu from '../components/Menu';
 
-export default function Projects() {
+export default function Projects(){
     return (
         <Box className={styles.wrapper}>
-            <Menu />
             <Box className={styles.container}>
-                <ProjectList />
+
+                <h1 style={{
+                    fontWeight: '100',
+                    fontSize: '4rem'
+                }}>
+                    My Projects
+                </h1>
+
             </Box>
+
+            <ProjectList />
         </Box>
     );
 };
