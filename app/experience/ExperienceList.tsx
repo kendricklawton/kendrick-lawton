@@ -36,28 +36,28 @@ export default function ExperienceList() {
 
                   <h1 style={{
                     fontWeight: '100',
-                    fontSize: '3rem'
+                    fontSize: '2.5rem'
                   }}>
                     {experience.name}
                   </h1>
 
                   <h1 style={{
                     fontWeight: '100',
-                    fontSize: '1.75rem'
+                    fontSize: '1.5rem'
                   }}>
                     • {experience.postion}
                   </h1>
 
                   <h1 style={{
                     fontWeight: '100',
-                    fontSize: '1.75rem'
+                    fontSize: '1.5rem'
                   }}>
                     • {experience.date}
                   </h1>
 
                   <h1 style={{
                     fontWeight: '100',
-                    fontSize: '1.75rem'
+                    fontSize: '1.5rem'
                   }}>
                     • {experience.description}
                   </h1>

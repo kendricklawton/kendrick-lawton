@@ -49,7 +49,7 @@ export default function ProjectList() {
 
                   <h1 style={{
                     fontWeight: '100',
-                    fontSize: '3rem'
+                    fontSize: '2.5rem'
                   }}>
                     {project.name}
                   </h1>
@@ -58,7 +58,7 @@ export default function ProjectList() {
                     // backgroundColor: 'blue',
                    
                     fontWeight: '100',
-                    fontSize: '1.75rem'
+                    fontSize: '1.5rem'
                   }}>
                     • {project.description}
                   </h1>
