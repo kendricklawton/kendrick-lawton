@@ -1,4 +1,4 @@
-import { Box, List, Divider, Stack } from '@mui/material';
+import { Box, Divider, Stack } from '@mui/material';
 import Link from 'next/link';
 import styles from '../page.module.css'
 
@@ -15,46 +15,36 @@ const experienceData = [
 
 export default function ExperienceList() {
   return (
-    <Box className={styles.menu}>
-      <List sx={{
-        width: '100%',
-      }}>
-        <Stack spacing={1}>
-          {experienceData.map((experience) => (
-            <>
-              <Link style={{
-                width: '100%', height: '100%',
-              }} href={experience.company_url} key={experience.id} target="_blank">
-                <Stack spacing={1}>
-                  <Box sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    width: '100%',
-                    alignItems: 'center',
-                    backgroundColor: 'green',
-                  }}>
-                    <h1 className={styles.listH1}>
-                      {experience.name}
-                    </h1>
-                  </Box>
-                  <h2 className={styles.listH2}>
-                    • {experience.postion}
-                  </h2>
-                  <h2 className={styles.listH2}>
-                    • {experience.date}
-                  </h2>
-                  <h2
-                    className={styles.listH2}
-                  >
-                    • {experience.description}
-                  </h2>
-                </Stack>
-              </Link>
-              <Divider light />
-            </>
-          ))}
-        </Stack>
-      </List>
-    </Box>
+
+    <Stack spacing={1} sx={{
+      width: '100%',
+      overflowY: 'auto'
+    }}>
+      {experienceData.map((experience) => (
+        <>
+          <Link style={{
+            width: '100%', height: '100%',
+          }} href={experience.company_url} key={experience.id} target="_blank">
+            <Stack spacing={1}>
+              <h2 className={styles.h2}>
+                {experience.name}
+              </h2>
+              <h3 className={styles.h3}>
+                • {experience.postion}
+              </h3>
+              <h3 className={styles.h3}>
+                • {experience.date}
+              </h3>
+              <h3
+                className={styles.h3}
+              >
+                • {experience.description}
+              </h3>
+            </Stack>
+          </Link>
+          <Divider light />
+        </>
+      ))}
+    </Stack>
   );
 }

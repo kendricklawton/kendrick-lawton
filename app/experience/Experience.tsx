@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../page.module.css';
-import { Button, Box } from '@mui/material';
+import { Button, Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 
+// import CertificationList from './CertificationList';
 import ProfessionalList from './ProfessionalList';
 import EducationList from './EducationList';
-// import CertificationList from './CertificationList';
 
 interface ExperienceProps {
     reference: React.RefObject<HTMLDivElement>;
@@ -15,19 +15,28 @@ export default function Experience({ reference }: ExperienceProps) {
     const [isEducation, setIsEducation] = useState(false)
     const [isProfessionl, setIsProfessionl] = useState(true)
 
-    const handleProfessionalClick = () => {
+    const [alignment, setAlignment] = useState('professional');
+
+    const handleChange = (
+        event: React.MouseEvent<HTMLElement>,
+        newAlignment: string,
+    ) => {
+        setAlignment(newAlignment);
+    };
+
+    const handleProfessional = () => {
         // setIsCertification(false);
         setIsEducation(false);
         setIsProfessionl(true);
     }
 
-    const handleEducationClick = () => {
+    const handleEducation = () => {
         // setIsCertification(false);
         setIsEducation(true);
         setIsProfessionl(false);
     }
 
-    // const handleSkillsClick = () => {
+    // const handleSkills = () => {
     //      setIsCertification(true);
     //      setIsEducation(false);
     //      setIsProfessionl(false);
@@ -36,42 +45,38 @@ export default function Experience({ reference }: ExperienceProps) {
     return (
         <Box className={styles.wrapper} ref={reference}>
             <Box className={styles.container}>
-                <h1 style={{
-                    fontWeight: '100',
-                    fontSize: '4rem'
-                }}>Experience</h1>
+                <h1 className={styles.h1}>Experience</h1>
             </Box>
 
             <Box className={styles.containerTwo}>
                 <Box className={styles.listMobileHeader}>
-                    <h1 className={styles.listH1}>Experience</h1>
+                    <h1 className={styles.h1}>Experience</h1>
                 </Box>
-                <Box sx={{
-                    width: '100%',
-                    padding: 1,
-                    display: 'flex',
-                    alignItems: 'center',
-                    // backgroundColor: 'green'
-                }}>
-                    <Button sx={{
-                        height: '30px',
-                        width: '120x',
-                        marginRight: '10px',
-                        padding: 1
-                    }} variant={isProfessionl ? 'contained' : 'text'} onClick={handleProfessionalClick} children='Professional' />
-                    <Button sx={{
-                        height: '30px',
-                        width: '120x',
-                        padding: 1
+
+                <ToggleButtonGroup
+                    color="primary"
+                    value={alignment}
+                    exclusive
+                    onChange={handleChange}
+                    aria-label="Platform"
+                    sx={{
+                        width: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
                     }}
-                        variant={isEducation ? 'contained' : 'text'} onClick={handleEducationClick} children='Education' />
-                    {/* <Button sx={{
-                        height: '30px',
-                        width: '120x',
-                        padding: 1
-                    }}
-                        variant={isCertification ? 'contained' : 'text'} onClick={handleCertificationClick} children='Certifictions' /> */}
-                </Box>
+                >
+                    <ToggleButton sx={{
+                        height: '50px',
+                        border: 'none',
+                        borderRadius: '0px'
+                    }} onClick={handleProfessional} value="professional">Professional</ToggleButton>
+                    <ToggleButton sx={{
+                        height: '50px',
+                        border: 'none',
+                        borderRadius: '0px'
+                    }} onClick={handleEducation} value="education">Education</ToggleButton>
+                    {/* <ToggleButton value="certifictions">Certifictions</ToggleButton> */}
+                </ToggleButtonGroup>
 
                 {isProfessionl && <ProfessionalList />}
                 {isEducation && <EducationList />}
@@ -79,9 +84,8 @@ export default function Experience({ reference }: ExperienceProps) {
 
                 <Box className={styles.listFooter}>
                     <Button sx={{
-                        height: '30px',
-                        width: '120x',
-                        padding: 1
+                        height: '50px',
+                        borderRadius: '0px'
                     }}
                         href="/resume.pdf"
                         target="_blank"
