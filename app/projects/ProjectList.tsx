@@ -1,78 +1,76 @@
-import { Box, Divider, List, Typography, Button, Stack, ListItemIcon } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { Box, Divider, List, Stack, IconButton } from '@mui/material';
+import { GitHub } from '@mui/icons-material';
 import Link from 'next/link';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import DescriptionIcon from '@mui/icons-material/Description';
 import styles from '../page.module.css'
 
-
-const projectsData = [
+const personalData = [
   {
     "id": 1,
     "name": "Project Auth",
     "githubUrl": "https://github.com/kendricklawton/project-auth",
-    "description": "React Native Expo Authentication Template",
-    "technologies": ["Expo", "JavaScript", "Node.js", "React Native"]
+    "description": "An Authentication Template Built Using Expo & React Native",
+
   },
   {
     "id": 2,
     "name": "Project Control",
     "githubUrl": "https://github.com/kendricklawton/project-control",
-    "description": "React Native Expo Finance Application",
-    "technologies": ["Expo", "JavaScript", "Node.js", "React Native"]
+    "description": "A Fiance Budget App Built Using Expo & React Native",
+
   },
   {
     "id": 3,
     "name": "Project Portfolio",
     "githubUrl": "https://github.com/kendricklawton/project-portfolio",
-    "description": "React Next.js Portfolio Template",
-    "technologies": ["CSS", "Next.js", "Node.js", "React", "TypeScript"]
-  }
+    "description": "A Web Portfolio Template Built Using Next.js & React",
+
+  },
+  // {
+  //   "id": 4,
+  //   "name": "Project Portfolio",
+  //   "githubUrl": "https://github.com/kendricklawton/project-portfolio",
+  //   "description": "A Web Portfolio Template Built Using Next.js & React",
+  //   "technologies": ["CSS", "Next.js", "Node.js", "React", "TypeScript"]
+  // }
 ]
 
 export default function ProjectList() {
-  return (
-    <Box className={styles.menu}>
 
+  const Personal = () => {
+    return (
       <List sx={{
         width: '100%',
-        //  backgroundColor: 'yellow'
+        height: '100%'
       }}>
-        <Stack spacing={3}>
-          {projectsData.map((project, index) => (
+        <Stack spacing={1}>
+          {personalData.map((project) => (
             <>
-              <Link style={{
-                width: '100%', height: '100%',
-                // backgroundColor: 'brown' 
-              }} href={project.githubUrl} key={project.id}  target="_blank" >
-                <Stack spacing={1}>
-
-                  <h1 style={{
-                    fontWeight: '100',
-                    fontSize: '2.5rem'
-                  }}>
-                    {project.name}
-                  </h1>
-
-                  <h1 style={{
-                    // backgroundColor: 'blue',
-                   
-                    fontWeight: '100',
-                    fontSize: '1.5rem'
-                  }}>
-                    • {project.description}
-                  </h1>
-
-                </Stack>
-              </Link>
-
-              {index < projectsData.length - 1 && <Divider light />}
+              <Stack spacing={1}>
+                <Box sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  width: '100%',
+                  alignItems: 'center',
+                  backgroundColor: 'green',
+                }}>
+                  <IconButton aria-label="github" sx={{ marginRight: '10px' }}>
+                    <GitHub />
+                  </IconButton>
+                  <h1 className={styles.listH1}>{project.name}</h1>
+                </Box>
+                <h2 className={styles.listH2}>• {project.description}</h2>
+              </Stack>
+              <Divider light />
             </>
           ))}
-
         </Stack>
       </List>
+    );
+  }
 
+  return (
+    <Box className={styles.menu}>
+      <Personal />
     </Box>
   );
 }

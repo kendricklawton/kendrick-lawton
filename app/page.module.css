@@ -5,8 +5,8 @@
   flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 16%;
-  padding-right: 16%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .container {
@@ -17,69 +17,89 @@
   align-items: center;
 }
 
+.containerTwo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
 .containerHome {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .menu {
-  width: 50%;
+  width: 100%;
+  /* min-height: 300px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
   overflow-y: auto;
-  background-color: blue;
+  /* background-color: azure; */
 }
 
-.menuContent {
+.listMobileHeader {
+  display: none;
+}
+
+.listFooter {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.header {
+.homeHeader {
+  font-weight: 100;
+  font-size: 4vw
+}
+
+.listH1 {
+  font-Weight: 100;
+  font-Size: 1.75rem;
+}
+
+.listH2 {
+  font-Weight: 100;
+  font-Size: 1.25rem;
+}
+
+.appBar {
   position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   height: 40px;
-z-index: 1150;
-  background-color: #CCCCCC;
+  z-index: 1150;
 }
 
-.headerStart,
-.headerEnd {
+.appBarStart,
+.appBarEnd {
   height: 100%;
 }
 
-.headerStart {
-  width: 50%;
+.appBarStart {
+  width: 10%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-/* .headerCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 10%;
-  } */
-
-.headerEnd {
+.appBarEnd {
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  width: 50%;
+
 }
 
 .footer {
@@ -89,7 +109,7 @@ z-index: 1150;
   bottom: 0;
   display: flex;
   flex-direction: row;
-  background-color: #CCCCCC;
+
 }
 
 .footerStart {
@@ -111,38 +131,6 @@ z-index: 1150;
 }
 
 
-.linkStyle {
-  padding-top: none;
-  padding-bottom: none;
-  display: flex;
-  padding: 5px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  height: 50px;
-  width: 100%;
-}
-
-.linkStyleActive {
-  padding-top: none;
-  padding-bottom: none;
-  display: flex;
-  padding: 5px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #CCCCCC;
-  width: 100%;
-  height: 50px;
-  transition: background-color 2s ease;
-}
-
-.listItemIcon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 @media screen and (max-width: 1000px) {
 
   .wrapper {
@@ -160,20 +148,13 @@ z-index: 1150;
     display: none;
   }
 
-  .menu {
+  .containerTwo {
     width: 100%;
+  }
+
+  .listMobileHeader {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    /* background-color: blue; */
-  }
-
-  .headerStart {
-    display: none;
-  }
-
-  .headerEnd {
     width: 100%;
   }
 }

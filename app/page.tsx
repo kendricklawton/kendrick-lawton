@@ -3,9 +3,10 @@
 import React, { useRef } from 'react';
 import styles from './page.module.css';
 import { Box, Button, Typography } from '@mui/material';
-import Experience from './experience/page';
-import Home from './home/page';
-import Projects from './projects/page';
+import WavingHandIcon from '@mui/icons-material/WavingHand';
+import Experience from './experience/Experience';
+import Projects from './projects/Projects';
+import Home from './home/Home'
 
 interface HeaderProps {
     scrollToRef: (refName: string) => void;
@@ -13,15 +14,18 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ scrollToRef }) => {
     return (
-        <Box className={styles.header}>
-            <Box className={styles.headerStart}>
-                <Typography color='primary' variant="overline" sx={{ fontSize: '1.5rem', marginLeft: 1 }}>Kendrick Lawton</Typography>
+        <Box className={styles.appBar}
+            sx={{
+                backgroundColor: 'background.default'
+            }}
+        >
+            <Box className={styles.appBarStart}>
+                <WavingHandIcon color='primary' sx={{ marginLeft: 1 }} />
             </Box>
 
-            <Box className={styles.headerEnd}>
-                <Button variant='text' onClick={() => scrollToRef('homeRef')}>Home</Button>
-                <Button variant='text' onClick={() => scrollToRef('projectsRef')}>Projects</Button>
-
+            <Box className={styles.appBarEnd}>
+                <Button variant='text' sx={{ marginRight: 1 }} onClick={() => scrollToRef('homeRef')}>Home</Button>
+                <Button variant='text' sx={{ marginRight: 1 }} onClick={() => scrollToRef('projectsRef')}>Projects</Button>
                 <Button variant='text' sx={{ marginRight: 1 }} onClick={() => scrollToRef('experienceRef')}>Experience</Button>
             </Box>
         </Box>
@@ -40,7 +44,6 @@ export default function App() {
             : refName === 'projectsRef'
                 ? projectsRef
                 : experienceRef;
-
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
