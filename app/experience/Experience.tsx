@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styles from '../page.module.css';
 import { Button, Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 
-// import CertificationList from './CertificationList';
 import ProfessionalList from './ProfessionalList';
 import EducationList from './EducationList';
 

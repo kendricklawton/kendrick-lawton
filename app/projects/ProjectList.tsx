@@ -1,6 +1,4 @@
-import { Box, Divider, List, Stack, IconButton } from '@mui/material';
-import { GitHub } from '@mui/icons-material';
-import Link from 'next/link';
+import { Divider, Stack } from '@mui/material';
 import styles from '../page.module.css'
 
 const personalData = [

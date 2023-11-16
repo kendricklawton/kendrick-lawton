@@ -1,4 +1,4 @@
-import { Box, Divider, Stack } from '@mui/material';
+import { Divider, Stack } from '@mui/material';
 import Link from 'next/link';
 import styles from '../page.module.css'
 

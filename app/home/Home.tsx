@@ -1,5 +1,5 @@
 import styles from '../page.module.css';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 
 interface HomeProps {
   reference: React.RefObject<HTMLDivElement>;
