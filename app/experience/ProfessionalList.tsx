@@ -9,7 +9,7 @@ const experienceData = [
     "postion": "Test Automation Specialist",
     "date": "April 2023 - Present",
     "company_url": "https://www.clydeco.com/en/locations/north-america/kansas-city",
-    "description": "Design Test Automation Frameworks",
+    "description": "Design Test Automation Frameworks Using Eggplant Test Automation & Selenium Webdriver",
   }
 ]
 
