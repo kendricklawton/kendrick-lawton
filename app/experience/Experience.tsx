@@ -77,7 +77,7 @@ export default function Experience({ reference }: ExperienceProps) {
                     }} onClick={handleEducation} value="education">Education</ToggleButton>
                     {/* <ToggleButton value="certifictions">Certifictions</ToggleButton> */}
                 </ToggleButtonGroup>
-
+            
                 {isProfessionl && <ProfessionalList />}
                 {isEducation && <EducationList />}
                 {/* {isSkills && <SkillsList />} */}
@@ -88,8 +88,9 @@ export default function Experience({ reference }: ExperienceProps) {
                         borderRadius: '0px'
                     }}
                         href="/resume.pdf"
-                        target="_blank"
-                        children='Resume' />
+                        target="_blank">
+                        Resume
+                    </Button>
                 </Box>
             </Box>
         </Box>

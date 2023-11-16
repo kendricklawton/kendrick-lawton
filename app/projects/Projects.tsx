@@ -11,7 +11,7 @@ export default function Projects({ reference }: Props) {
     return (
         <Box className={styles.wrapper} ref={reference}>
             <Box className={styles.container}>
-            <h1 className={styles.h1}>Projects</h1>
+                <h1 className={styles.h1}>Projects</h1>
             </Box>
             <Box className={styles.containerTwo}>
                 <Box className={styles.listMobileHeader}>
@@ -25,7 +25,7 @@ export default function Projects({ reference }: Props) {
                     }}
                         href="/resume.pdf"
                         target="_blank"
-                        children='Resume' />
+                    >Resume</Button>
                 </Box>
             </Box>
         </Box>
