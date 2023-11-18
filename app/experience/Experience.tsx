@@ -90,7 +90,7 @@ export default function Experience({ reference }: ExperienceProps) {
                 {/* Displaying the appropriate list based on the selected toggle button */}
                 {isProfessionl && <ProfessionalList />}
                 {isEducation && <EducationList />}
-                {/* {isSkills && <SkillsList />} */}
+                {/* {isCertification && <CertificationList />} */}
 
                 {/* Footer section with a button for Resume */}
                 <Box className={styles.listFooter}>
@@ -103,7 +103,6 @@ export default function Experience({ reference }: ExperienceProps) {
                         href="/resume.pdf"
                         rel="noopener noreferrer"
                         target="_blank">
-
                         Resume
                     </Button>
                 </Box>

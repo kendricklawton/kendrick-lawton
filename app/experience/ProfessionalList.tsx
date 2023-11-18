@@ -1,4 +1,4 @@
-import { Divider, Stack } from '@mui/material';
+import { Box, Divider, Stack } from '@mui/material';
 import styles from '../page.module.css'
 
 const professionalData = [
@@ -13,17 +13,15 @@ const professionalData = [
 
 export default function ProfessionalList() {
   return (
-    // Stack component to stack elements vertically with spacing and scrollable content
-    <Stack spacing={1} sx={{
+    <li style={{
       width: '100%',
       overflowY: 'auto'
     }}>
       {/* Mapping over each professional entry */}
       {professionalData.map((professional) => (
-        // Using a fragment to group elements
-        <>
+        <ul key={professional.id}>
          {/* Stack for displaying professional details */}
-          <Stack spacing={1} key={professional.id}>
+          <Stack spacing={1}>
             {/* Professional name as an h2 heading */}
             <h2 className={styles.h2}>
               {professional.name}
@@ -40,11 +38,11 @@ export default function ProfessionalList() {
             <h3 className={styles.h3}>
               • {professional.description}
             </h3>
+            <Divider light />
           </Stack>
           {/* Divider component to separate experience entries */}
-          <Divider light />
-        </>
+        </ul>
       ))}
-    </Stack>
+    </li>
   );
 }

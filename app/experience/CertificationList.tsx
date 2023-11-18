@@ -9,7 +9,6 @@ const certificationData = [
     "company": "Microsoft Certified",
     "name": "Azure Something",
     "date": "December 2023",
-    "certification_url": "https://learn.microsoft.com/en-us/credentials/browse/"
   }
 ]
 
@@ -25,7 +24,7 @@ export default function CertificationList() {
         // Using a fragment to group elements
         <>
             {/* Stack for displaying certification details */}
-            <Stack spacing={1}>
+            <Stack spacing={1} key={certification.id}>
               {/* Certification company as an h2 heading */}
               <h2 className={styles.h2}>
                 {certification.company}
@@ -38,10 +37,10 @@ export default function CertificationList() {
               <h3 className={styles.h3}>
                 • {certification.date}
               </h3>
+              <Divider light/>
             </Stack>
 
           {/* Divider component to separate certification entries */}
-          <Divider light />
         </>
       ))}
     </Stack>

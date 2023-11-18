@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button, Box } from '@mui/material';
 import styles from '../page.module.css';
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function Projects({ reference }: Props) {
+    const gitHubUrl: string = process.env.GITHUB_URL ?? '';
+
     return (
          // Main wrapper box for the component
         <Box className={styles.wrapper} ref={reference}>
@@ -30,7 +33,7 @@ export default function Projects({ reference }: Props) {
                         borderRadius: '0px',
                         marginTop: '5px'
                     }}
-                        href="https://github.com/kendricklawton/"
+                        href={gitHubUrl}
                         rel="noopener noreferrer"
                         target="_blank"
                         aria-label="Github"

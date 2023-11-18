@@ -1,5 +1,5 @@
-import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
+
+import { Box, Divider, Stack } from '@mui/material';
 import styles from '../page.module.css'
 
 // Education data 
@@ -14,16 +14,15 @@ const educationData = [
 
 export default function EducationList() {
   return (
-    // Stack component to stack elements vertically with spacing
-    <Stack spacing={1} sx={{
+    <li style={{
       width: '100%',
-      overflowY: 'auto'
+      overflowY: 'auto',
+      listStyleType: 'none'
     }}>
       {educationData.map((education) => (
-        // Using a fragment to group elements
-        <>
+        <ul key={education.id} >
           {/* Stack for displaying certification details */}
-          <Stack spacing={1} key={education.id} >
+          <Stack spacing={1} >
             {/* Education name as an h2 heading */}
             <h2 className={styles.h2}>
               {education.name}
@@ -36,12 +35,11 @@ export default function EducationList() {
             <h3 className={styles.h3}>
               • {education.date}
             </h3>
+            {/* Divider component to separate certification entries */}
+            <Divider />
           </Stack>
-          
-          {/* Divider component to separate certification entries */}
-          <Divider light />
-        </>
+        </ul>
       ))}
-    </Stack>
+    </li>
   );
 }

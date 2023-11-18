@@ -1,4 +1,4 @@
-import { Divider, Stack } from '@mui/material';
+import { Box, Divider, List, ListItem, ListItemText, Stack } from '@mui/material';
 import styles from '../page.module.css'
 
 // Personal project data (multiple entries)
@@ -22,26 +22,27 @@ const personalData = [
 
 export default function ProjectList() {
   return (
-    // Stack component to stack elements vertically with spacing and scrollable content
-    <Stack spacing={1} sx={{
+    <li style={{
       width: '100%',
-      overflowY: 'auto'
+      overflowY: 'auto',
+      listStyleType: 'none'
     }}>
       {/* Mapping over each personal project */}
       {personalData.map((project) => (
-        // Using a fragment to group elements
-        <>
+        <ul key={project.id}>
           {/* Stack for displaying project details */}
           <Stack spacing={1}>
             {/* Project name as an h2 heading */}
             <h2 className={styles.h2}>{project.name}</h2>
             {/* Project description as an h3 heading */}
             <h3 className={styles.h3}>• {project.description}</h3>
+            {/* Divider component to separate project entries */}
+            <Divider light />
           </Stack>
-          {/* Divider component to separate project entries */}
-          <Divider light />
-        </>
+        </ul>
       ))}
-    </Stack>
+    </li>
   );
 }
+
+

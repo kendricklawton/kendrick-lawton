@@ -12,8 +12,8 @@ import styles from '../page.module.css'
 export default function Footer() {
 
     // URLs for social media links
-    const linkedInLink = "https://www.linkedin.com/in/kendrick-lawton-257684247/";
-    const githubLink = "https://github.com/kendricklawton/";
+    const gitHubUrl: string = process.env.GITHUB_URL ?? '';
+    const linkedInUrl: string = process.env.LINKEDIN_URL ?? '';
 
     // Acessing toggleTheme function from the theme context using custom hook
     const { toggleTheme } = useThemeContext();
@@ -30,14 +30,14 @@ export default function Footer() {
             {/*Centered section containing socil media icons */}
             <Box className={styles.footerCenter}>
                 {/* LinkedIn link wrapped in a IconButton */}
-                <Link href={linkedInLink} target="_blank" rel="noopener noreferrer">
+                <Link href={linkedInUrl} target="_blank" rel="noopener noreferrer">
                     <IconButton color='primary' aria-label="LinkedIn" >
                         <LinkedInIcon />
                     </IconButton>
                 </Link>
 
                 {/* GitHub link wrapped in a IconButton */}
-                <Link href={githubLink} target="_blank" rel="noopener noreferrer" >
+                <Link href={gitHubUrl} target="_blank" rel="noopener noreferrer" >
                     <IconButton color='primary' aria-label="GitHub">
                         <GitHubIcon />
                     </IconButton>
