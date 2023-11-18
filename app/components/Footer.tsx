@@ -5,9 +5,9 @@ import Link from 'next/link'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import { Box, IconButton, Typography } from '@mui/material'
+import IconButton from '@mui/material/IconButton'
 import { useThemeContext } from './ThemeProvider'
-import styles from '../page.module.css'
+import styles from '../styles/page.module.css'
 
 export default function Footer() {
 
@@ -20,15 +20,15 @@ export default function Footer() {
 
     return (
         // Footer container with defined styles 
-        <Box className={styles.footer}>
+        <div className={styles.footer}>
 
             {/* Start of footer content */}
-            <Box className={styles.footerStart}>
-                <Typography>© 2023 Kendrick Lawton</Typography>
-            </Box>
+            <div className={styles.footerStart}>
+                <h4 className={styles.h4}>© 2023 Kendrick Lawton</h4>
+            </div>
 
             {/*Centered section containing socil media icons */}
-            <Box className={styles.footerCenter}>
+            <div className={styles.footerCenter}>
                 {/* LinkedIn link wrapped in a IconButton */}
                 <Link href={linkedInUrl} target="_blank" rel="noopener noreferrer">
                     <IconButton color='primary' aria-label="LinkedIn" >
@@ -42,14 +42,14 @@ export default function Footer() {
                         <GitHubIcon />
                     </IconButton>
                 </Link>
-            </Box>
+            </div>
 
             {/* End section containing the toggle for dark mode */}
-            <Box className={styles.footerEnd}>
+            <div className={styles.footerEnd}>
                 <IconButton color='primary' aria-label="DarkMode" onClick={toggleTheme}>
                     <DarkModeIcon />
                 </IconButton>
-            </Box>
-        </Box>
+            </div>
+        </div>
     );
 }

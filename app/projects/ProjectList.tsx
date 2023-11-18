@@ -1,15 +1,12 @@
-import { Box, Divider, IconButton, List, ListItem, ListItemText, Stack } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub'
-import Link from 'next/link'
-import styles from '../page.module.css'
-
+import { Divider, Stack } from '@mui/material';
+import styles from '../styles/page.module.css'
 
 // Project data
 const personalData = [
   {
     "id": 1,
     "name": "Kendrick Lawton",
-    "description": "My personal portfolio built with Next.js, MUI, React, & deployed with Vercel.",
+    "description": "My personal portfolio built with Next.js, MUI, React, & deployed with Vercel. Automation tests also provided with Seleiunm webdriver.",
     "link": "https://github.com/kendricklawton/kendrick-lawton"
   },
   {

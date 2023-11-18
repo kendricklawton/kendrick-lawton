@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Button, Box } from '@mui/material';
-import styles from '../page.module.css';
+import Button  from '@mui/material/Button';
+import styles from '../styles/page.module.css'
 import ProjectList from './ProjectList';
 
 interface Props {
@@ -9,25 +9,26 @@ interface Props {
 }
 
 export default function Projects({ reference }: Props) {
-    const gitHubUrl: string = process.env.GITHUB_URL ?? '';
+    // URL for project link
+    const gitHubUrl = 'https://github.com/kendricklawton';
 
     return (
          // Main wrapper box for the component
-        <Box className={styles.wrapper} ref={reference}>
+        <div className={styles.wrapper} ref={reference}>
              {/* Container for the main heading */}
-            <Box className={styles.container}>
+            <div className={styles.container}>
                 <h1 className={styles.h1}>Projects</h1>
-            </Box>
+            </div>
              {/* Secondary container */}
-            <Box className={styles.containerTwo}>
-                <Box className={styles.listMobileHeader}>
+            <div className={styles.containerTwo}>
+                <div className={styles.listMobileHeader}>
                     <h1 className={styles.h1}>Projects</h1>
-                </Box>
+                </div>
                   {/* Displaying the project list */}
                   <ProjectList />
 
                   {/* Footer section with a button for Github */}
-                <Box className={styles.listFooter}>
+                <div className={styles.listFooter}>
                     <Button sx={{
                         height: '50px',
                         borderRadius: '0px',
@@ -37,9 +38,9 @@ export default function Projects({ reference }: Props) {
                         target="_blank"
                         aria-label="Github"
                     >VIEW GITHUB</Button>
-                </Box>
-            </Box>
-        </Box>
+                </div>
+            </div>
+        </div>
     );
 }
 

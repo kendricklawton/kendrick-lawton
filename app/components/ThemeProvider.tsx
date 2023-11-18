@@ -1,6 +1,5 @@
 'use client'
 
-
 import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -58,9 +57,9 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
     // Function to toggle between light and dark themes
     const toggleTheme = () => {
-        setIsDarkTheme(!isDarkTheme);
+        const newTheme = !isDarkTheme;
+        setIsDarkTheme(newTheme);
     };
-
 
     // Selecting the current theme based on isDarkTheme state
     const currentTheme = isDarkTheme ? darkTheme : lightTheme;

@@ -1,5 +1,5 @@
-import { Box, Divider, Stack } from '@mui/material';
-import styles from '../page.module.css'
+import { Divider, Stack } from '@mui/material';
+import styles from '../styles/page.module.css'
 
 const skillData = [
   {

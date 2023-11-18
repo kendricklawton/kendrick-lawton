@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react';
-import styles from '../page.module.css';
 import { Button, Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import ProfessionalList from './ProfessionalList';
 import EducationList from './EducationList';
 import SkillList from './SkillList';
+import styles from '../styles/page.module.css'
 
 interface ExperienceProps {
     reference: React.RefObject<HTMLDivElement>;
@@ -60,17 +60,17 @@ export default function Experience({ reference }: ExperienceProps) {
 
     return (
         // Main wrapper box for the component
-        <Box className={styles.wrapper} ref={reference}>
+        <div className={styles.wrapper} ref={reference}>
             {/* Container for the main heading */}
-            <Box className={styles.container}>
+            <div className={styles.container}>
                 <h1 className={styles.h1}>Experience</h1>
-            </Box>
+            </div>
             {/* Secondary container */}
-            <Box className={styles.containerTwo}>
+            <div className={styles.containerTwo}>
                 {/* Mobile header */}
-                <Box className={styles.listMobileHeader}>
+                <div className={styles.listMobileHeader}>
                     <h1 className={styles.h1}>Experience</h1>
-                </Box>
+                </div>
 
                 {/* Toggle button group to switch between different lists */}
                 <ToggleButtonGroup
@@ -115,7 +115,7 @@ export default function Experience({ reference }: ExperienceProps) {
                 {/* {isCertification && <CertificationList />} */}
 
                 {/* Footer section with a button for Resume */}
-                <Box className={styles.listFooter}>
+                <div className={styles.listFooter}>
                     <Button sx={{
                         height: '50px',
                         borderRadius: '0px',
@@ -126,8 +126,8 @@ export default function Experience({ reference }: ExperienceProps) {
                         target="_blank">
                         VIEW RESUME
                     </Button>
-                </Box>
-            </Box>
-        </Box>
+                </div>
+            </div>
+        </div>
     );
 }

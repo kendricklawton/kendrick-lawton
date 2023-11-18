@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import styles from './page.module.css';
 import { Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import Experience from './experience/Experience';
 import Projects from './projects/Projects';
 import Home from './home/Home';
+import styles from './styles/page.module.css';
 
 // Styles for ToggleButton and ToggleButtonGroup
 const ToggleButtonStyles = {
@@ -44,27 +44,26 @@ const Header: React.FC<HeaderProps> = ({ scrollToRef }) => {
             }}
         >
             {/* Left section of the header */}
-            <Box className={styles.appBarStart}>
+            <div className={styles.appBarStart}>
                 <WavingHandIcon color='primary' />
-            </Box>
+            </div>
 
             {/* Right section of the header containing ToggleButtonGroup */}
-            <Box className={styles.appBarEnd}>
+            <div className={styles.appBarEnd}>
                 <ToggleButtonGroup
                     color="primary"
                     value={alignment}
                     exclusive
                     onChange={handleChange}
-                    aria-label="Platform"
+                    aria-label="Page Links"
                     sx={ToggleButtonGroupStyles}
                 >
                     {/* ToggleButtons for different sections */}
-                    <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('homeRef')} value="home">Home</ToggleButton>
-                    <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('experienceRef')} value="experience">Experience</ToggleButton>
-                    <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('projectsRef')} value="projects">Projects</ToggleButton>
-
+                    <ToggleButton id='toggleButtonHome' aria-label="Home" selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('homeRef')} value="home">Home</ToggleButton>
+                    <ToggleButton id='toggleButtonExperience' aria-label="Experience" selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('experienceRef')} value="experience">Experience</ToggleButton>
+                    <ToggleButton id='toggleButtonProject' aria-label="Project" selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('projectsRef')} value="projects">Projects</ToggleButton>
                 </ToggleButtonGroup>
-            </Box>
+            </div>
         </Box>
     );
 }

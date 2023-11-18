@@ -1,6 +1,6 @@
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
-import styles from '../page.module.css'
+import styles from '../styles/page.module.css'
 
 // Certification data
 const certificationData = [
