@@ -31,7 +31,6 @@ export default function Projects({ reference }: Props) {
                     <Button sx={{
                         height: '50px',
                         borderRadius: '0px',
-                        marginTop: '5px'
                     }}
                         href={gitHubUrl}
                         rel="noopener noreferrer"

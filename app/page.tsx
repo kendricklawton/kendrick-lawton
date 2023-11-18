@@ -18,7 +18,6 @@ const ToggleButtonGroupStyles = {
     height: '100%',
     display: 'flex',
     alignItems: 'center',
-    marginRight: 1 
 };
 
 // Props for the Header component
@@ -46,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToRef }) => {
         >
             {/* Left section of the header */}
             <Box className={styles.appBarStart}>
-                <WavingHandIcon color='primary' sx={{ marginLeft: 1 }} />
+                <WavingHandIcon color='primary' />
             </Box>
 
             {/* Right section of the header containing ToggleButtonGroup */}

@@ -5,15 +5,15 @@ import Link from 'next/link'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import { Box, IconButton } from '@mui/material'
+import { Box, IconButton, Typography } from '@mui/material'
 import { useThemeContext } from './ThemeProvider'
 import styles from '../page.module.css'
 
 export default function Footer() {
 
     // URLs for social media links
-    const gitHubUrl: string = process.env.GITHUB_URL ?? '';
-    const linkedInUrl: string = process.env.LINKEDIN_URL ?? '';
+    const gitHubUrl = 'https://github.com/kendricklawton';
+    const linkedInUrl = 'https://www.linkedin.com/in/kendrick-lawton-257684247/';
 
     // Acessing toggleTheme function from the theme context using custom hook
     const { toggleTheme } = useThemeContext();
@@ -25,6 +25,7 @@ export default function Footer() {
             {/* Start of footer content */}
             <Box className={styles.footerStart}>
                 {/* Additional content or links if needed */}
+                <Typography>Built with Next.js and deployed with Vercel.</Typography>
             </Box>
 
             {/*Centered section containing socil media icons */}
@@ -46,7 +47,7 @@ export default function Footer() {
 
             {/* End section containing the toggle for dark mode */}
             <Box className={styles.footerEnd}>
-                <IconButton color='primary' aria-label="DarkMode" onClick={toggleTheme} sx={{ marginRight: 1 }}>
+                <IconButton color='primary' aria-label="DarkMode" onClick={toggleTheme}>
                     <DarkModeIcon />
                 </IconButton>
             </Box>

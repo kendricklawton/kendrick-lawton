@@ -5,6 +5,7 @@ import styles from '../page.module.css';
 import { Button, Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import ProfessionalList from './ProfessionalList';
 import EducationList from './EducationList';
+import SkillList from './SkillList';
 
 interface ExperienceProps {
     reference: React.RefObject<HTMLDivElement>;
@@ -15,6 +16,7 @@ export default function Experience({ reference }: ExperienceProps) {
     // const [isCertification, setIsCertification] = useState(false)
     const [isEducation, setIsEducation] = useState(false)
     const [isProfessionl, setIsProfessionl] = useState(true)
+    const [isSkill, setIsSkill] = useState(false);
 
     // State variable for the selected toggle button
     const [alignment, setAlignment] = useState('professional');
@@ -32,19 +34,29 @@ export default function Experience({ reference }: ExperienceProps) {
         // setIsCertification(false);
         setIsEducation(false);
         setIsProfessionl(true);
+        setIsSkill(false);
     }
 
     const handleEducation = () => {
         // setIsCertification(false);
         setIsEducation(true);
         setIsProfessionl(false);
+        setIsSkill(false);
     }
 
-    // const handleSkills = () => {
+    // const handleCertification = () => {
     //      setIsCertification(true);
     //      setIsEducation(false);
     //      setIsProfessionl(false);
+    //      setIsSkill(false);
     // }
+
+    const handleSkill = () => {
+        // setIsCertification(false);
+         setIsEducation(false);
+         setIsProfessionl(false);
+         setIsSkill(true);
+    }
 
     return (
         // Main wrapper box for the component
@@ -84,12 +96,22 @@ export default function Experience({ reference }: ExperienceProps) {
                         border: 'none',
                         borderRadius: '0px'
                     }} onClick={handleEducation} aria-label="Education" value="education">Education</ToggleButton>
-                    {/* <ToggleButton value="certifictions">Certifictions</ToggleButton> */}
+                    <ToggleButton sx={{
+                        height: '50px',
+                        border: 'none',
+                        borderRadius: '0px'
+                    }} onClick={handleSkill} aria-label="Skills" value="skill">Skills</ToggleButton>
+                    {/* <ToggleButton sx={{
+                        height: '50px',
+                        border: 'none',
+                        borderRadius: '0px'
+                    }} onClick={handleCertification} aria-label="Certification" value="certification">Certification</ToggleButton> */}
                 </ToggleButtonGroup>
 
                 {/* Displaying the appropriate list based on the selected toggle button */}
                 {isProfessionl && <ProfessionalList />}
                 {isEducation && <EducationList />}
+                {isSkill && <SkillList />}
                 {/* {isCertification && <CertificationList />} */}
 
                 {/* Footer section with a button for Resume */}
@@ -97,7 +119,6 @@ export default function Experience({ reference }: ExperienceProps) {
                     <Button sx={{
                         height: '50px',
                         borderRadius: '0px',
-                        marginTop: '5px'
                     }}
                         aria-label="Resume"
                         href="/resume.pdf"
