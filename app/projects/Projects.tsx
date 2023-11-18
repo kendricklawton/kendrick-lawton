@@ -9,23 +9,32 @@ interface Props {
 
 export default function Projects({ reference }: Props) {
     return (
+         // Main wrapper box for the component
         <Box className={styles.wrapper} ref={reference}>
+             {/* Container for the main heading */}
             <Box className={styles.container}>
                 <h1 className={styles.h1}>Projects</h1>
             </Box>
+             {/* Secondary container */}
             <Box className={styles.containerTwo}>
                 <Box className={styles.listMobileHeader}>
                     <h1 className={styles.h1}>Projects</h1>
                 </Box>
-                <ProjectList />
+                  {/* Displaying the project list */}
+                  <ProjectList />
+
+                  {/* Footer section with a button for Github */}
                 <Box className={styles.listFooter}>
                     <Button sx={{
                         height: '50px',
-                        borderRadius: '0px'
+                        borderRadius: '0px',
+                        marginTop: '5px'
                     }}
-                        href="/resume.pdf"
+                        href="https://github.com/kendricklawton/"
+                        rel="noopener noreferrer"
                         target="_blank"
-                    >Resume</Button>
+                        aria-label="Github"
+                    >GitHub</Button>
                 </Box>
             </Box>
         </Box>

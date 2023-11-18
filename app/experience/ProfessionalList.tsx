@@ -1,47 +1,47 @@
 import { Divider, Stack } from '@mui/material';
-import Link from 'next/link';
 import styles from '../page.module.css'
 
-const experienceData = [
+const professionalData = [
   {
     "id": 1,
     "name": "Clyde & Co",
     "postion": "Test Automation Specialist",
     "date": "April 2023 - Present",
-    "company_url": "https://www.clydeco.com/en/locations/north-america/kansas-city",
     "description": "Design Test Automation Frameworks Using Eggplant Test Automation & Selenium Webdriver",
   }
 ]
 
-export default function ExperienceList() {
+export default function ProfessionalList() {
   return (
-
+    // Stack component to stack elements vertically with spacing and scrollable content
     <Stack spacing={1} sx={{
       width: '100%',
       overflowY: 'auto'
     }}>
-      {experienceData.map((experience) => (
+      {/* Mapping over each professional entry */}
+      {professionalData.map((professional) => (
+        // Using a fragment to group elements
         <>
-          <Link style={{
-            width: '100%', height: '100%',
-          }} href={experience.company_url} key={experience.id} target="_blank">
-            <Stack spacing={1}>
-              <h2 className={styles.h2}>
-                {experience.name}
-              </h2>
-              <h3 className={styles.h3}>
-                • {experience.postion}
-              </h3>
-              <h3 className={styles.h3}>
-                • {experience.date}
-              </h3>
-              <h3
-                className={styles.h3}
-              >
-                • {experience.description}
-              </h3>
-            </Stack>
-          </Link>
+         {/* Stack for displaying professional details */}
+          <Stack spacing={1} key={professional.id}>
+            {/* Professional name as an h2 heading */}
+            <h2 className={styles.h2}>
+              {professional.name}
+            </h2>
+            {/* Professional position as an h3 heading */}
+            <h3 className={styles.h3}>
+              • {professional.postion}
+            </h3>
+            {/* Professional date as an h3 heading */}
+            <h3 className={styles.h3}>
+              • {professional.date}
+            </h3>
+            {/* Professional description as an h3 heading */}
+            <h3 className={styles.h3}>
+              • {professional.description}
+            </h3>
+          </Stack>
+          {/* Divider component to separate experience entries */}
           <Divider light />
         </>
       ))}
