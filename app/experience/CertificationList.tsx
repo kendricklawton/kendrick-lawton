@@ -17,9 +17,9 @@ export default function CertificationList() {
     <li className={styles.list}>
       {/* Mapping over each certification entry */}
       {certificationData.map((certification) => (
-        <ul>
+        <ul key={certification.id}>
           {/* Stack for displaying certification details */}
-          <Stack spacing={1} key={certification.id}>
+          <Stack spacing={1}>
             {/* Certification company as an h2 heading */}
             <h2 className={styles.h2}>
               {certification.company}
