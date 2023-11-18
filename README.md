@@ -41,6 +41,8 @@ pnpm dev
 # or
 bun dev
 ```
+## Integration of Selenium Test Scripts
+Selenium test scripts are available to automate testing. These scripts can be found in the 'tests/' directory. To execute the tests, ensure you have the necessary Selenium dependencies installed and configured.
 
 ## Explore More
 For a deeper understanding of Next.js, refer to the following resources:
