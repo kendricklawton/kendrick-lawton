@@ -9,19 +9,19 @@ const personalData = [
   {
     "id": 1,
     "name": "Kendrick Lawton",
-    "description": "My Personal Portfolio Built Using Next.js, MUI, React, & Hosted Using Vercel",
+    "description": "My personal portfolio built with Next.js, MUI, React, & deployed with Vercel.",
     "link": "https://github.com/kendricklawton/kendrick-lawton"
   },
   {
     "id": 2,
     "name": "Project Auth",
-    "description": "Authentication Mobile Template Built Using Expo & React Native",
+    "description": "An authentication mobile template built with Expo, Firebase, MUI, & React Native.",
     "link": "https://github.com/kendricklawton/project-auth"
   },
   {
     "id": 3,
     "name": "Project Control",
-    "description": "Fiance Budget Mobile App Built Using Expo & React Native",
+    "description": "A budgeting mobile application built with Expo, Firebase, MUI & React Native.",
     "link": "https://github.com/kendricklawton/project-control"
   }
 ]
@@ -38,21 +38,7 @@ export default function ProjectList() {
           {/* Stack for displaying project details */}
           <Stack spacing={1}>
             {/* Project name as an h2 heading */}
-            <Box sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              height: '60px'
-            }}>
-              <h2 className={styles.h2} style={{marginRight: '5px'}}>{project.name}</h2>
-              <Link href={project.link} target="_blank" rel="noopener noreferrer" >
-                <IconButton color='primary' aria-label="GitHub">
-                  <GitHubIcon />
-                </IconButton>
-              </Link>
-            </Box>
-
-
+            <h2 className={styles.h2} style={{ marginRight: '5px' }}>{project.name}</h2>
             {/* Project description as an h3 heading */}
             <h3 className={styles.h3}>• {project.description}</h3>
             {/* Divider component to separate project entries */}

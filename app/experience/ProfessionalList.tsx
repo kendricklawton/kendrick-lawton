@@ -7,7 +7,7 @@ const professionalData = [
     "name": "Clyde & Co",
     "postion": "Test Automation Specialist",
     "date": "April 2023 - Present",
-    "description": "Design Test Automation Frameworks Using Eggplant Test Automation & Selenium Webdriver",
+    "description": "Design Test Automation Frameworks Using Appium, Eggplant, & Selenium",
   }
 ]
 

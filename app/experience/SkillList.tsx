@@ -15,7 +15,7 @@ const skillData = [
   {
     "id": 3,
     "title": "Tools",
-    "list": "Appium, Azure DevOps, Back4App, Eggplant Test Automation, Firebase, GitHub, Netlify, Selenium, Vercel",
+    "list": "Appium, Azure DevOps, Eggplant, Firebase, GitHub, Selenium, Vercel, Visual Studio, Visual Studio Code",
   }
 ]
 

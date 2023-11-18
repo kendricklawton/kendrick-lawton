@@ -36,7 +36,7 @@ export default function Projects({ reference }: Props) {
                         rel="noopener noreferrer"
                         target="_blank"
                         aria-label="Github"
-                    >GitHub</Button>
+                    >VIEW GITHUB</Button>
                 </Box>
             </Box>
         </Box>

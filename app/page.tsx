@@ -9,7 +9,7 @@ import Projects from './projects/Projects';
 import Home from './home/Home';
 
 // Styles for ToggleButton and ToggleButtonGroup
-const ToggleButtonStyles =  {
+const ToggleButtonStyles = {
     border: 'none',
     borderRadius: '0px'
 };
@@ -60,15 +60,16 @@ const Header: React.FC<HeaderProps> = ({ scrollToRef }) => {
                 >
                     {/* ToggleButtons for different sections */}
                     <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('homeRef')} value="home">Home</ToggleButton>
-                    <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('projectsRef')} value="projects">Projects</ToggleButton>
                     <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('experienceRef')} value="experience">Experience</ToggleButton>
+                    <ToggleButton selected={false} sx={ToggleButtonStyles} onClick={() => scrollToRef('projectsRef')} value="projects">Projects</ToggleButton>
+
                 </ToggleButtonGroup>
             </Box>
         </Box>
     );
 }
 
-// App component with references and sections for Home, Projects, and Experience
+// App component with references and sections for Home, Experience, and Projects
 export default function App() {
     const homeRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
@@ -88,11 +89,10 @@ export default function App() {
         <>
             {/* Header component */}
             <Header scrollToRef={scrollToRef} />
-            
-            {/* Sections: Home, Projects, Experience */}
+            {/* Sections: Home, Experience, Projects */}
             <Home reference={homeRef} />
-            <Projects reference={projectsRef} />
             <Experience reference={experienceRef} />
+            <Projects reference={projectsRef} />
         </>
     );
 };

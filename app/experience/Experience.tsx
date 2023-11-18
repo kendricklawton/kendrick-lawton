@@ -124,7 +124,7 @@ export default function Experience({ reference }: ExperienceProps) {
                         href="/resume.pdf"
                         rel="noopener noreferrer"
                         target="_blank">
-                        Resume
+                        VIEW RESUME
                     </Button>
                 </Box>
             </Box>

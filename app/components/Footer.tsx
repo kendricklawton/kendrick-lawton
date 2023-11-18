@@ -24,8 +24,7 @@ export default function Footer() {
 
             {/* Start of footer content */}
             <Box className={styles.footerStart}>
-                {/* Additional content or links if needed */}
-                <Typography>Built with Next.js and deployed with Vercel.</Typography>
+                <Typography>© 2023 Kendrick Lawton</Typography>
             </Box>
 
             {/*Centered section containing socil media icons */}
