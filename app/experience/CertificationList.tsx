@@ -14,35 +14,29 @@ const certificationData = [
 
 export default function CertificationList() {
   return (
-    // Stack component to stack elements vertically with spacing
-    <Stack spacing={1} sx={{
-      width: '100%',
-      overflowY: 'auto'
-    }}>
+    <li className={styles.list}>
       {/* Mapping over each certification entry */}
       {certificationData.map((certification) => (
-        // Using a fragment to group elements
-        <>
-            {/* Stack for displaying certification details */}
-            <Stack spacing={1} key={certification.id}>
-              {/* Certification company as an h2 heading */}
-              <h2 className={styles.h2}>
-                {certification.company}
-              </h2>
-              {/* Certification name as an h3 heading */}
-              <h3 className={styles.h3}>
-                • {certification.name}
-              </h3>
-              {/* Certification date as an h3 heading */}
-              <h3 className={styles.h3}>
-                • {certification.date}
-              </h3>
-              <Divider light/>
-            </Stack>
-
-          {/* Divider component to separate certification entries */}
-        </>
+        <ul>
+          {/* Stack for displaying certification details */}
+          <Stack spacing={1} key={certification.id}>
+            {/* Certification company as an h2 heading */}
+            <h2 className={styles.h2}>
+              {certification.company}
+            </h2>
+            {/* Certification name as an h3 heading */}
+            <h3 className={styles.h3}>
+              • {certification.name}
+            </h3>
+            {/* Certification date as an h3 heading */}
+            <h3 className={styles.h3}>
+              • {certification.date}
+            </h3>
+            {/* Divider component to separate certification entries */}
+            <Divider light />
+          </Stack>
+        </ul>
       ))}
-    </Stack>
+    </li>
   );
 }

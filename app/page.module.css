@@ -33,6 +33,12 @@
   width: 100%;
 }
 
+.list {
+  width: 100%;
+  overflow-y: auto;
+  list-style-type: none;
+}
+
 .listMobileHeader {
   display: none;
 }

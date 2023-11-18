@@ -14,11 +14,7 @@ const educationData = [
 
 export default function EducationList() {
   return (
-    <li style={{
-      width: '100%',
-      overflowY: 'auto',
-      listStyleType: 'none'
-    }}>
+    <li className={styles.list}>
       {educationData.map((education) => (
         <ul key={education.id} >
           {/* Stack for displaying certification details */}

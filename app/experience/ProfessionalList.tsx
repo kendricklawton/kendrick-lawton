@@ -13,14 +13,11 @@ const professionalData = [
 
 export default function ProfessionalList() {
   return (
-    <li style={{
-      width: '100%',
-      overflowY: 'auto'
-    }}>
+    <li className={styles.list}>
       {/* Mapping over each professional entry */}
       {professionalData.map((professional) => (
         <ul key={professional.id}>
-         {/* Stack for displaying professional details */}
+          {/* Stack for displaying professional details */}
           <Stack spacing={1}>
             {/* Professional name as an h2 heading */}
             <h2 className={styles.h2}>

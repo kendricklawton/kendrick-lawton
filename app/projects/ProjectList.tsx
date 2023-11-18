@@ -1,7 +1,7 @@
 import { Box, Divider, List, ListItem, ListItemText, Stack } from '@mui/material';
 import styles from '../page.module.css'
 
-// Personal project data (multiple entries)
+// Project data
 const personalData = [
   {
     "id": 1,
@@ -22,11 +22,7 @@ const personalData = [
 
 export default function ProjectList() {
   return (
-    <li style={{
-      width: '100%',
-      overflowY: 'auto',
-      listStyleType: 'none'
-    }}>
+    <li className={styles.list}>
       {/* Mapping over each personal project */}
       {personalData.map((project) => (
         <ul key={project.id}>
