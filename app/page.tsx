@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import Experience from './experience/Experience';
+import Footer from './components/Footer'
 import Projects from './projects/Projects';
 import Home from './home/Home';
 import styles from './styles/page.module.css';
@@ -92,6 +93,7 @@ export default function App() {
             <Home reference={homeRef} />
             <Experience reference={experienceRef} />
             <Projects reference={projectsRef} />
+            <Footer /> {/* Displaying the Footer component */}
         </>
     );
 };

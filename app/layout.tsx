@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Footer from './components/Footer'
+
 import './globals.css'
 import { ThemeProvider } from './components/ThemeProvider'
 
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}> {/* Body tag with Inter font's class name */}
         <ThemeProvider> {/* ThemeProvider wrapping the children */}
           {children} {/* Displaying the children components */}
-          <Footer /> {/* Displaying the Footer component */}
+  
         </ThemeProvider>
       </body>
     </html>
