@@ -17,12 +17,12 @@ export default function Projects({ reference }: Props) {
         <div className={styles.wrapper} ref={reference}>
              {/* Container for the main heading */}
             <div className={styles.container}>
-                <h1 className={styles.h1}>PROJECTS</h1>
+                <h1 className={styles.h1}>Projects</h1>
             </div>
              {/* Secondary container */}
             <div className={styles.containerTwo}>
                 <div className={styles.listMobileHeader}>
-                    <h1 className={styles.h1}>PROJECTS</h1>
+                    <h1 className={styles.h1}>Projects</h1>
                 </div>
                   {/* Displaying the project list */}
                   <ProjectList />
