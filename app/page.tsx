@@ -25,8 +25,8 @@ interface HeaderProps {
     scrollToRef: (refName: string) => void;
 }
 
-// Header component containing toggle buttons for different sections
-const Header: React.FC<HeaderProps> = ({ scrollToRef }) => {
+// AppBar component containing toggle buttons for different sections
+const AppBar: React.FC<HeaderProps> = ({ scrollToRef }) => {
     const [alignment, setAlignment] = useState('home');
 
     // Function to handle toggle button clicks
@@ -87,7 +87,7 @@ export default function App() {
     return (
         <>
             {/* Header component */}
-            <Header scrollToRef={scrollToRef} />
+            <AppBar scrollToRef={scrollToRef} />
             {/* Sections: Home, Experience, Projects */}
             <Home reference={homeRef} />
             <Experience reference={experienceRef} />

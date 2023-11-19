@@ -7,7 +7,7 @@ import { ThemeProvider } from './components/ThemeProvider'
 // Initializing the Inter font with Latin subset
 const inter = Inter({ subsets: ['latin'] })
 
-// Metadata for the portfolio template
+// Metadata
 export const metadata: Metadata = {
   title: "Kendrick Lawton",
   description:
