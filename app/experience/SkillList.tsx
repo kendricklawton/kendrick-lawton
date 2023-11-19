@@ -5,7 +5,7 @@ const skillData = [
   {
     "id": 1,
     "title": "Languages",
-    "list": "C#, CSS, HTML, Java, JavaScript, Python, SenseTalk, TypeScript",
+    "list": "C#, CSS, HTML, Java, JavaScript, Python, SenseTalk, TypeScript, SQL",
   },
   {
     "id": 2,
