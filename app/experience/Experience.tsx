@@ -63,13 +63,13 @@ export default function Experience({ reference }: ExperienceProps) {
         <div className={styles.wrapper} ref={reference}>
             {/* Container for the main heading */}
             <div className={styles.container}>
-                <h1 className={styles.h1}>Experience</h1>
+                <h1 className={styles.h1}>EXPERIENCE</h1>
             </div>
             {/* Secondary container */}
             <div className={styles.containerTwo}>
                 {/* Mobile header */}
                 <div className={styles.listMobileHeader}>
-                    <h1 className={styles.h1}>Experience</h1>
+                    <h1 className={styles.h1}>EXPERIENCE</h1>
                 </div>
 
                 {/* Toggle button group to switch between different lists */}

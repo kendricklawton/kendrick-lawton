@@ -5,8 +5,8 @@
   flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .container {
@@ -51,23 +51,17 @@
 
 .h1 {
   font-Weight: 200;
-  font-size: 4vw
+  font-size: 4.5rem
 }
 
 .h2 {
   font-Weight: 200;
-  font-Size: 2.5vw;
+  font-Size: 2.5rem;
 }
 
 .h3 {
   font-Weight: 200;
-  font-Size: 1.5vw;
-}
-
-/* Used For Footer */
-.h4 {
-  font-Weight: 200;
-  font-Size: 1rem;
+  font-Size: 1.25rem;
 }
 
 .appBar {
@@ -122,15 +116,16 @@
   padding-left: 10px;
 }
  
-.footerStartContent {
-  font-size: 1rem;
-}
-
 .footerCenter {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40%;
+}
+
+.footerCenterContent {
+  display: flex;
+  flex-direction: row;
 }
 
 .footerEnd {
@@ -143,18 +138,6 @@
 
 
 @media screen and (max-width: 1000px) {
-
-  .wrapper {
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    flex-direction: row;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-
   .container {
     display: none;
   }
@@ -163,8 +146,45 @@
     width: 100%;
   }
 
-  .footerStartContent {
-    font-size: 0.75rem;
+  .footer {
+    width: 100%;
+    /* height: 150px; */
+    /* position: fixed; */
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 900;
+  }
+
+  .footerStart, 
+  .footerCenter,
+  .footerEnd {
+    width: 100%;
+    height: 50px;
+  }
+
+  .footerStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+   
+  .footerCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footerEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+
   }
 
   .listMobileHeader {
@@ -178,14 +198,10 @@
   }
 
   .h2 {
-    font-Size: 1.75rem;
+    font-Size: 2rem;
   }
   
   .h3 {
-    font-Size: 1rem;
-  }
-  
-  .h4 {
-    font-Size: .7rem;
+    font-Size: 1.5rem;
   }
 }

@@ -24,11 +24,13 @@ export default function Footer() {
 
             {/* Start of footer content */}
             <div className={styles.footerStart}>
-                <h4 className={styles.h4}>© 2023 Kendrick Lawton</h4>
+                <h3 className={styles.h3}>© 2023 Kendrick Lawton</h3>
             </div>
 
             {/*Centered section containing socil media icons */}
             <div className={styles.footerCenter}>
+
+            <div className={styles.footerCenterContent}>
                 {/* LinkedIn link wrapped in a IconButton */}
                 <Link href={linkedInUrl} target="_blank" rel="noopener noreferrer">
                     <IconButton color='primary' aria-label="LinkedIn" >
@@ -43,12 +45,15 @@ export default function Footer() {
                     </IconButton>
                 </Link>
             </div>
+            </div>
 
             {/* End section containing the toggle for dark mode */}
             <div className={styles.footerEnd}>
-                <IconButton color='primary' aria-label="DarkMode" onClick={toggleTheme}>
-                    <DarkModeIcon />
-                </IconButton>
+  
+                    <IconButton color='primary' aria-label="DarkMode" onClick={toggleTheme}>
+                        <DarkModeIcon />
+                    </IconButton>
+      
             </div>
         </div>
     );

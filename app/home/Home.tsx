@@ -10,7 +10,7 @@ export default function Home({ reference }: HomeProps): JSX.Element {
     <div className={styles.wrapper} ref={reference}>
       <div className={styles.containerFull}>
       <h1 className={styles.h1}>Hi, My Name Is Kendrick</h1>
-      <h1 className={styles.h1}>I Engineer Software & Automate Processes</h1>
+      <h1 className={styles.h1}>I Engineer Solutions & Automate Processes</h1>
       </div>
     </div>
   );
