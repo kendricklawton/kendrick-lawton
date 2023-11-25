@@ -10,12 +10,12 @@ const skillData = [
   {
     "id": 2,
     "title": "Frameworks",
-    "list": "Expo, .Net, Next.js, React, React Native",
+    "list": "Django, Expo, Flask, .Net, Next.js, React, React Native",
   },
   {
     "id": 3,
     "title": "Tools",
-    "list": "Appium, Azure DevOps, Eggplant, Firebase, GitHub, Selenium, Vercel, Visual Studio, Visual Studio Code",
+    "list": "Appium, Azure, Azure DevOps, Eggplant, Firebase, GitHub, Google Cloud, Selenium, Vercel, Visual Studio, Visual Studio Code",
   }
 ]
 
