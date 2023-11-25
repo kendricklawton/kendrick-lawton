@@ -14,12 +14,6 @@ const personalData = [
     "name": "Project Auth",
     "description": "An authentication mobile template built with Expo, Firebase, MUI, & React Native.",
     "link": "https://github.com/kendricklawton/project-auth"
-  },
-  {
-    "id": 3,
-    "name": "Project Control",
-    "description": "A budgeting mobile application built with Expo, Firebase, MUI & React Native.",
-    "link": "https://github.com/kendricklawton/project-control"
   }
 ]
 
