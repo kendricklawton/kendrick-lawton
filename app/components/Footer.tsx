@@ -24,7 +24,7 @@ export default function Footer() {
 
             {/* Start of footer content */}
             <div className={styles.footerStart}>
-                <h3 className={styles.h3}>© 2023 Kendrick Lawton</h3>
+                <h3 className={styles.h4}>© 2023 Kendrick Lawton</h3>
             </div>
 
             {/*Centered section containing socil media icons */}
