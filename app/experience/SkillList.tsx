@@ -5,17 +5,17 @@ const skillData = [
   {
     "id": 1,
     "title": "Languages",
-    "list": "C#, CSS, HTML, Java, JavaScript, Python, SenseTalk, TypeScript, SQL",
+    "list": "C#, CSS, Dart, HTML, Java, JavaScript, Python, SenseTalk, SQL, TypeScript",
   },
   {
     "id": 2,
     "title": "Frameworks",
-    "list": "Django, Expo, Flask, .Net, Next.js, React, React Native",
+    "list": "Appium, Django, Expo, Flask, .Net, Next.js, React, React Native, Selenium",
   },
   {
     "id": 3,
     "title": "Tools",
-    "list": "Appium, Azure, Azure DevOps, Eggplant, Firebase, GitHub, Google Cloud, Selenium, Vercel, Visual Studio, Visual Studio Code",
+    "list": "Azure, Azure DevOps, Eggplant, Firebase, GitHub, Google Cloud, Vercel, Visual Studio, Visual Studio Code",
   }
 ]
 
