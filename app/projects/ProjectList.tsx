@@ -6,13 +6,13 @@ const personalData = [
   {
     "id": 1,
     "name": "Kendrick Lawton",
-    "description": "My personal portfolio built with Next.js, MUI, React, & deployed with Vercel. Automation tests also provided with Seleiunm webdriver.",
+    "description": "My personal portfolio built with Next.js, Node.js, React, TypeScript, & deployed with Vercel.",
     "link": "https://github.com/kendricklawton/kendrick-lawton"
   },
   {
     "id": 2,
     "name": "Project Auth",
-    "description": "An authentication mobile template built with Expo, Firebase, MUI, & React Native.",
+    "description": "An authentication mobile template built with Expo, Firebase, JavaScript, Node.js, & React Native.",
     "link": "https://github.com/kendricklawton/project-auth"
   }
 ]
