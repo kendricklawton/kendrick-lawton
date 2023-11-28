@@ -10,7 +10,7 @@ const skillData = [
   {
     "id": 2,
     "title": "Frameworks",
-    "list": "Appium, Expo, Flask, Flutter, .Net, Next.js, React, React Native, Selenium",
+    "list": "Expo, Flask, Flutter, .Net, Next.js, React, React Native, Selenium",
   },
   {
     "id": 3,
