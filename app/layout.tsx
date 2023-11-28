@@ -22,10 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en"> {/* HTML tag with lang attribute set to 'en' for English */}
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="title" content="Kendrick Lawton" />
+        <meta property="description" content="Welcome to Kendrick Lawton's portfolio." />
+      </head>
       <body className={inter.className}> {/* Body tag with Inter font's class name */}
         <ThemeProvider> {/* ThemeProvider wrapping the children */}
           {children} {/* Displaying the children components */}
-  
+
         </ThemeProvider>
       </body>
     </html>
